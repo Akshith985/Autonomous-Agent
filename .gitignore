@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+.localstack/
+# Ignore the AI's temporary fix files
+*_fixed.java

@@ -1,0 +1,17 @@
+services:
+  # The AWS Emulator
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3,lambda,cloudwatch,logs # We only need these for now
+      - DEBUG=1
+
+  # The "Single Pane" Dashboard
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true

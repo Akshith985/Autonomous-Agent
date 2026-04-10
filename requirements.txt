@@ -1,0 +1,4 @@
+groq
+watchdog
+boto3
+python-dotenv
